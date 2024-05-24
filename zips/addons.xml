@@ -23,7 +23,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.35mmonline" version="1.1" name="35mm.online" provider-name="mbebe">
+<addon id="plugin.video.35mmonline" version="1.2" name="35mm.online" provider-name="mbebe">
     <requires>
         <import addon="script.module.requests" />
 		<import addon="script.module.inputstreamhelper" version="0.3.3"/>
@@ -35,6 +35,29 @@
         <description>35mm.online</description>
         <disclaimer>https://github.com/mbebe/blomqvist</disclaimer>
         <summary>35mm.online</summary>
+        <language>pl</language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>https://github.com/mbebe/blomqvist</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.aniwavemb" name="aniwave.to" version="1.0" provider-name="mbebe">
+    <requires>
+        <import addon="script.module.requests" />
+        <import addon="script.module.resolveurl"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <description>aniwave.to</description>
+        <disclaimer>https://github.com/mbebe/blomqvist</disclaimer>
+        <summary>aniwave.to</summary>
         <language>pl</language>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
@@ -580,7 +603,7 @@ Tabele, terminarze, listy strzelców
     </extension>
 </addon>
 
-<addon id="plugin.video.fifaplusbeta" name="FIFA plus (beta)" version="0.5" provider-name="mbebe">
+<addon id="plugin.video.fifaplusbeta" name="FIFA plus (beta)" version="0.6" provider-name="mbebe">
     <requires>
         <import addon="script.module.routing" />
         <import addon="script.module.requests" />
