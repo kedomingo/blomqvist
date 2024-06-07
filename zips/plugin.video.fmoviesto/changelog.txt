@@ -1,3 +1,6 @@
+1.34
+- fix domain
+
 1.33
 - fix keys vidplay (https://github.com/Ciarands/)
 
