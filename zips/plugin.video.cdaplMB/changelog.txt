@@ -1,3 +1,5 @@
+1.14
+- fix logowanie
 1.13
 - fix logowanie/odświeżanie tokena
 1.12
