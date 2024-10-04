@@ -32,10 +32,6 @@ for dir in "$PLUGIN_DIR"/*/; do
     # Extract the directory name (e.g., 'a' or 'b')
     dir_name=$(basename "$dir")
 
-    if [[ $dir_name =~ ^plugin\. ]]; then
-        dir="$dir""src/"
-    fi
-
     # Create the corresponding directory in zips (e.g., /zips/a)
     mkdir -p "$ZIP_DIR/$dir_name"
 
@@ -47,11 +43,11 @@ for dir in "$PLUGIN_DIR"/*/; do
 
     curr_dir=$(pwd)
 
-    (cd "$dir" && zip -r "out.zip" . --quiet)
+    (cd "$dir.." && zip -r "$dir_name.zip" "$dir_name" --quiet)
 
     cd "$curr_dir"
 
-    mv "$dir""out.zip" "$ZIP_DIR/$dir_name/$dir_name-$next_version.zip"
+    mv "$dir""../$dir_name.zip" "$ZIP_DIR/$dir_name/$dir_name-$next_version.zip"
 
     if [[ $dir_name =~ ^repository\.kedomingo ]]; then
         rm repository.kedomingo*.zip
