@@ -1,6 +1,0 @@
-0.3
-- fix stream decode
-0.2
-- fix install problem
-0.1
-- initial version 

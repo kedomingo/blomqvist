@@ -1,5 +1,0 @@
-0.2 
-- fix seriale
-
-0.1
-- initial version 

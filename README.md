@@ -1,2 +1,2 @@
 
-https://mbebe.github.io/blomqvist/
+https://kedomingo.github.io/blomqvist/

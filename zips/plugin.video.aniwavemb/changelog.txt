@@ -1,5 +1,0 @@
-1.1
-- fix tv shows
-
-1.0
-- initial version
