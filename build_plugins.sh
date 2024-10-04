@@ -32,7 +32,7 @@ for dir in "$PLUGIN_DIR"/*/; do
     # Extract the directory name (e.g., 'a' or 'b')
     dir_name=$(basename "$dir")
 
-    if [[ $dir =~ ^plugins\. ]]; then
+    if [[ $dir_name =~ ^plugin\. ]]; then
         dir="$dir""src/"
     fi
 
@@ -45,8 +45,13 @@ for dir in "$PLUGIN_DIR"/*/; do
     # Get the next version number
     next_version=$(get_next_version "$dir_name")
 
-    # Zip the copied directory (e.g., /zips/a/a-1.11.zip)
-    zip -r "$ZIP_DIR/$dir_name/$dir_name-$next_version.zip" "$dir" --quiet
+    curr_dir=$(pwd)
+
+    (cd "$dir" && zip -r "out.zip" . --quiet)
+
+    cd "$curr_dir"
+
+    mv "$dir""out.zip" "$ZIP_DIR/$dir_name/$dir_name-$next_version.zip"
 
     if [[ $dir_name =~ ^repository\.kedomingo ]]; then
         rm repository.kedomingo*.zip
